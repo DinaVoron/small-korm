@@ -1,0 +1,396 @@
+body {
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  margin: 0px;
+  --main-color: #F9F8F8;
+  --text-color: #272838;
+  --accent1: #F3DE8A;
+  --accent2: #EB9486;
+  --accent3: #7E7F9A;
+  background-color: var(--main-color);
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--accent3);
+  font-size: 25;
+  padding: 15px;
+}
+
+header a {
+  color: var(--main-color);
+  text-decoration: none;
+}
+
+header a:hover {
+  color: var(--accent1);
+}
+
+header nav {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  column-gap: 20px;
+  justify-content: space-around;
+}
+
+.menuItem {
+  text-align: center;
+}
+
+.menuItem__block {
+  display: inline-block;
+}
+
+nav:nth-fisrt-child() {
+  margin-right: 70%;
+}
+
+main {
+  padding-top: 40px;
+}
+
+.mainGrid {
+  width: 75%;
+  height: 85%;
+  margin: 0px auto;
+  display: grid;
+  grid-template-rows: repeat(8, 1fr);
+  grid-template-columns: repeat(14, 1fr);
+  align-items: center;
+}
+.first {
+  grid-area: 1/3/4/5;
+  overflow: hidden;
+  -webkit-animation: linear alternate movingUpDown 2s infinite;
+  animation: linear alternate movingUpDown 2s infinite;
+}
+.first img {
+  width: 100%;
+}
+.second {
+  grid-area: 4/1/6/3;
+  overflow: hidden;
+  -webkit-animation: linear alternate movingUpDown 2s infinite;
+  animation: linear alternate movingUpDown 2s infinite;
+}
+.second img {
+  width: 100%;
+}
+.third {
+  grid-area: 1/6/3/8;
+  overflow: hidden;
+  -webkit-animation: linear alternate movingUpDown 2s infinite;
+  animation: linear alternate movingUpDown 2s infinite;
+}
+.third img {
+  width: 100%;
+}
+.fourth {
+  grid-area: 1/10/4/12;
+  overflow: hidden;
+  -webkit-animation: linear alternate movingUpDown 2s infinite;
+  animation: linear alternate movingUpDown 2s infinite;
+}
+.fourth img {
+  width: 100%;
+}
+.fifth {
+  grid-area: 6/2/8/4;
+  -webkit-animation: linear alternate movingUpDown 2s infinite;
+  animation: linear alternate movingUpDown 2s infinite;
+}
+.fifth img {
+  height: 100%;
+}
+.sixth {
+  grid-area: 6/11/10/15;
+  overflow: hidden;
+  -webkit-animation: linear alternate movingUpDown 2s infinite;
+  animation: linear alternate movingUpDown 2s infinite;
+}
+.sixth img {
+  height: 100%;
+}
+.seventh {
+  grid-area: 4/6/6/10;
+  text-align: center;
+  font-size: 40;
+  color: var(--accent2);
+}
+.eighth {
+  grid-area: 7/7/10/10;
+  overflow: hidden;
+  -webkit-animation: linear alternate movingUpDown 2s infinite;
+  animation: linear alternate movingUpDown 2s infinite;
+}
+.eighth img {
+  height: 100%;
+}
+.ninth {
+  grid-area: 3/12/6/13;
+  overflow: hidden;
+  -webkit-animation: linear alternate movingUpDown 2s infinite;
+  animation: linear alternate movingUpDown 2s infinite;
+}
+.ninth img {
+  width: 100%;
+}
+.tenth {
+  grid-area: 1/13/4/15;
+  overflow: hidden;
+  -webkit-animation: linear alternate movingUpDown 2s infinite;
+  animation: linear alternate movingUpDown 2s infinite;
+}
+.tenth img {
+  width: 100%;
+}
+.textFlex {
+  color: var(--text-color);
+  font-size: 1.7em;
+  width: 75%;
+  margin: 15em auto;
+  text-align: center;
+}
+h1 {
+  text-align: center;
+  color: var(--accent2);
+}
+.textFlex img {
+  float: left;
+}
+.elementAnimation {
+  opacity: 0;
+}
+.elementShown {
+  opacity: 1;
+  transition: opacity 1s;
+}
+.main {
+  text-align: center;
+  font-size: 20;
+  width: 60%;
+  margin: 0px auto;
+}
+.flexButton {
+  padding-left: 2em;
+  display: flex;
+  justify-content: space-around;
+  color: var(--accent2);
+  font-size: 1.5em;
+  flex-direction: column;
+}
+.flexButton__form {
+  display: flex;
+  flex-direction: column;
+}
+
+
+#list_buttom {
+  text-align: center;
+  padding: 1em 2em;
+  color: var(--main-color);
+  background: var(--accent2);
+  border: 0px;
+  border-radius: 0.5em;
+}
+
+#list_buttom:hover {
+  color: var(--accent1);
+  cursor: pointer;
+}
+
+input[type="radio"]:checked {
+  accent-color: var(--text-color);
+}
+
+.flexButton__input {
+  vertical-align: top;
+  color: var(--text-color);
+  font-size: 0.8em;
+  border: 1px solid var(--accent2);
+}
+
+.flexButton__input:focus {
+  outline-color: var(--accent2);
+  background-color: var(--accent1);
+}
+
+.summary {
+  font-size: 1.5em;
+  color: var(--accent2);
+  padding-left: 1em;
+  padding-bottom: 1em;
+}
+
+table {
+  background: var(--main-color);
+  border-spacing: 0px;
+  width: 100%;
+  border: 1px solid var(--accent2);
+}
+table img {
+  width: 20em;
+}
+table th {
+  text-align: center;
+  font-size: 1.2em;
+  color: var(--accent2);
+}
+table td {
+  text-align: center;
+  border-top: 1px solid var(--accent2);
+  color: var(--text-color);
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+table li {
+  text-align: left;
+}
+.calculator-logo {
+  color: var(--accent2);
+  font-size: 2.5em;
+  text-align: center;
+}
+span {
+  color: var(--accent1);
+}
+.calculator-input {
+  font-size: 2em;
+  text-align: center;
+  color: var(--accent2);
+  padding: 2em 0em;
+}
+.calculator-input select {
+  font-size: 0.8em;
+  color: var(--text-color);
+  border-radius: 0.2em;
+}
+.calculator-input input {
+  font-size: 0.8em;
+  color: var(--text-color);
+  border-radius: 0.2em;
+}
+.calculator-count {
+  text-align: center;
+}
+.calculator-count input {
+  font-size: 1.5em;
+  background-color: var(--accent1);
+  color: var(--text-color);
+  border: 0px;
+  border-radius: 0.5em;
+  padding: 0.8em 2em;
+}
+.calculator-result {
+  text-align: center;
+  visibility: hidden;
+  font-size: 2em;
+  text-align: center;
+  color: var(--accent2);
+  padding-top: 1em;
+}
+.calculator-result__res {
+  font-size: 2em;
+  color: var(--accent3)
+}
+
+.af {
+  font-size: 20;
+}
+.input {
+  width: 180px;
+}
+.input img {
+  display: block;
+  width: 220px;
+}
+.input input {
+  width: 30px;
+  background-color: #fff9f1;
+  font-size: 40;
+  border: 0px;
+  margin-left: 70px;
+}
+.indiv {
+  margin: 0px auto;
+}
+
+
+@media (max-width: 1200px) {
+  .seventh {
+    font-size: 1.5em;
+  }
+  .sixth {
+    grid-area: 6/8/7/10;
+  }
+  .eighth {
+    grid-area: 6/12/7/14;
+  }
+  .fifth {
+    grid-area: 6/2/8/4;
+  }
+}
+
+
+@media (max-width: 800px) {
+  body {
+    font-size: 0.7em;
+  }
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .first, .second, .third, .fourth,
+  .fifth, .sixth, .eighth, .ninth, .tenth {
+    display: none;
+  }
+  .mainGrid {
+    display: block;
+    height: auto;
+    margin-bottom: auto;
+  }
+  .seventh {
+    font-weight: bold;
+    font-size: 2em;
+  }
+  .textFlex {
+    margin: 4em auto;
+  }
+  table {
+    background: var(--main-color);
+    border-spacing: 0px;
+    width: 100%;
+    border: 1px solid var(--accent2);
+  }
+  table img {
+    width: 0em;
+  }
+  table th {
+    text-align: center;
+    font-size: 0.8em;
+    color: var(--accent2);
+  }
+  table td {
+    text-align: center;
+    font-size: 0.6em;
+  }
+}
+
+@-webkit-keyframes movingUpDown {
+  from {
+    transform: translateY(20px);
+  }
+  to {
+    transform: translateY(0px);
+  }
+}
+@keyframes movingUpDown {
+  from {
+    transform: translateY(20px);
+  }
+  to {
+    transform: translateY(0px);
+  }
+}

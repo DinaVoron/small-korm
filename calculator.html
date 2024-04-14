@@ -1,0 +1,43 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="css\button.css">
+    <link rel="stylesheet" href="css\main.css">
+    <meta charset=utf-8>
+    <script src="js\main.js"></script>
+    <script src="js\button.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a href="index.html">
+          <img src="img/paw.svg" width="20px" height="20px">
+          SMALL KORM
+        </a>
+        <a href="calculator.html"><div class="menuItem">КАЛЬКУЛЯТОР КОРМА</div></a>
+        <a href="korm_list.html"><div class="menuItem">СПИСОК КОРМОВ</div></a>
+      </nav>
+    </header>
+    <main>
+      <h1 class="calculator-logo">
+        Узнайте <span>идеальное</span> суточное количество корма<br>
+        для Вашей собаки
+      </h1>
+      <article class="calculator-input">
+        <form>
+          Вес собаки:&nbsp;&nbsp;
+          <input type="text" size="4" name="inp"/>
+          кг
+        </form>
+      </article>
+      <article class="calculator-count">
+        <button class="bubbly-button" onclick="countKorm(); animateButton(event)">РАССЧИТАТЬ</button>
+      </article>
+      <div class="calculator-result" id="result_div">
+        <form>
+          <div class="calculator-result__res" id="result"></div>
+          <img width="200px" src="img/bowl.png"/>
+        </form>
+      </div>
+    </main>  
+  </body>
+</html>

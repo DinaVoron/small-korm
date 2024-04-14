@@ -1,0 +1,66 @@
+<html>
+<head>
+  <link rel="stylesheet" href="css/main.css">
+  <script type="text/javascript" src="js\new_main.js" defer></script>
+  <script src="http://d3js.org/d3.v7.js"></script>
+  <meta charset=utf-8>
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="index.html">
+        <img src="img/paw.svg" width="20px" height="20px">
+        SMALL KORM
+      </a>
+      <a href="calculator.html"><div class="menuItem">КАЛЬКУЛЯТОР КОРМА</div></a>
+      <a href="korm_list.html"><div class="menuItem">СПИСОК КОРМОВ</div></a>
+    </nav>
+  </header>
+  <main> 
+    <details>
+      <summary class="summary">Показать фильтры</summary>
+      <div class="flexButton">
+        <form class="flexButton__form">
+            ЦЕНА:
+            <label>
+              <input type="radio" name="sort-price" value="hight" onclick="setPrice(this.value)">
+              по возрастанию
+            </label>
+            <label>
+              <input type="radio" name="sort-price" value="low" onclick="setPrice(this.value)">
+              по убыванию
+            </label>
+            <label>
+              <input type="radio" name="sort-price" value="" onclick="setPrice(this.value)">
+              не важно
+            </label>
+        </form>
+        <form class="flexButton__form">
+          СОДЕРЖАНИЕ МЯСА:
+          <label>
+            <input type="radio" name="sort-meet" value="hight" onclick="setMeet(this.value)">
+            по возрастанию
+          </label>
+          <label>
+            <input type="radio" name="sort-meet" value="low" onclick="setMeet(this.value)">
+            по убыванию
+          </label>
+          <label>
+            <input type="radio" name="sort-meet" value="" onclick="setMeet(this.value)">
+            не важно
+          </label>
+        </form>
+        <form>
+          ИСКЛЮЧИТЬ:&nbsp;&nbsp;
+          <input class="flexButton__input" size="50" type="text" name="ingridient" oninput="setFilter(this.value)">
+        </form> 
+        <form>
+          <input type="button" value="ПОКАЗАТЬ" id="list_buttom" onmousedown="showTable()">
+        </form> 
+      </div>
+    </details>  
+    <table id="KL">
+    </table>
+  </main> 
+  </body>
+</html>
